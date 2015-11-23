@@ -219,13 +219,39 @@ div#notebook {
 <li><code>ipython</code> version 2.0 or later, with notebook support: <a href="http://ipython.org">http://ipython.org</a></li>
 <li><code>seaborn</code>: version 0.5 or later, used mainly for plot styling</li>
 </ul>
-<p>The easiest way to get these is to use the <a href="http://store.continuum.io/">conda</a> environment manager.
-I suggest downloading and installing <a href="http://conda.pydata.org/miniconda.html">miniconda</a>.</p>
-<p>The following command will install all required packages:</p>
+<p>If you haven't install these packages, I suggest downloading and installing the <a href="http://conda.pydata.org/miniconda.html">miniconda</a> environment manager.</p>
+<ol>
+<li><p>Install miniconda on Mac:</p>
 
-<pre><code>$ conda install numpy scipy matplotlib scikit-learn ipython-notebook</code></pre>
-<p>Alternatively, you can download and install the (very large) Anaconda software distribution, found at <a href="https://store.continuum.io/">https://store.continuum.io/</a>.</p>
-<h3 id="Checking-your-installation">Checking your installation<a class="anchor-link" href="#Checking-your-installation">&#182;</a></h3><p>You can run the following code to check the versions of the packages on your system:</p>
+<pre><code>$ wget https://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
+$ bash Miniconda-latest-MacOSX-x86_64.sh # follow the instructions</code></pre>
+<p>or on Linux:</p>
+
+<pre><code>$ wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+$ bash Miniconda-latest-Linux-x86_64.sh # follow the instructions</code></pre>
+</li>
+<li><p>Add miniconda to your path:</p>
+
+<pre><code>$ export PATH="/home/qliu/miniconda2/bin:$PATH"</code></pre>
+</li>
+<li><p>Create an environment for sklearn with all required packages:</p>
+
+<pre><code>$ conda create -n sklearn numpy scipy matplotlib scikit-learn ipython-notebook</code></pre>
+</li>
+<li><p>Enter the sklearn environment:</p>
+
+<pre><code>$ source activate sklearn</code></pre>
+</li>
+</ol>
+<p>You can obtain this tutorial from <a href="https://github.com/lqhl/sklearn_pycon2015">GitHub</a>:</p>
+
+<pre><code>$ git clone https://github.com/lqhl/sklearn_pycon2015</code></pre>
+<h3 id="Checking-your-installation">Checking your installation<a class="anchor-link" href="#Checking-your-installation">&#182;</a></h3><p>Suppose you've installed all required packages, you can start IPython notebook:</p>
+
+<pre><code>$ ipython notebook</code></pre>
+<p>and find this tutorial in <code>sklearn_pycon2015/notebooks/intro-sklearn.ipynb</code>.
+If you don't want to install all these packages, you can view the static version at <a href="https://github.com/lqhl/sklearn_pycon2015/blob/master/notebooks/intro-sklearn.ipynb">https://github.com/lqhl/sklearn_pycon2015/blob/master/notebooks/intro-sklearn.ipynb</a>.</p>
+<p>You can run the following code to check the versions of the packages on your system:</p>
 <p>(in IPython notebook, press <code>shift</code> and <code>return</code> together to execute the contents of a cell)</p>
 
 </div>
